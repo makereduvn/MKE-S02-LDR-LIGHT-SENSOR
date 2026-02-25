@@ -7,12 +7,10 @@ Sản phẩm phù hợp cho nhiều ứng dụng như: đo độ sáng môi trư
 Cảm biến ánh sáng quang trở MKE-S02 LDR Light Sensor hỗ trợ điện áp giao tiếp 3.3V và 5VDC, cho phép kết nối trực tiếp và an toàn với hầu hết các bo mạch điều khiển phổ biến hiện nay như Arduino, Raspberry Pi, Jetson Nano, Micro:bit và nhiều nền tảng khác. Sản phẩm đi kèm cáp kết nối 3P XH2.54 – Dupont, đảm bảo kết nối chắc chắn, ổn định và thuận tiện trong quá trình sử dụng.
 
 ## Nguyên lý hoạt động
-
-![MKE_S02](/image/MKE_S02_0.jpg)
-
 Cảm biến hoạt động dựa trên đặc tính của quang trở LDR: điện trở của LDR thay đổi theo cường độ ánh sáng môi trường.
 - Khi ánh sáng mạnh: điện trở LDR giảm.
 - Khi ánh sáng yếu: điện trở LDR tăng.
+![MKE_S02](/image/MKE_S02_0.jpg)
 Để đọc được giá trị này bằng vi điều khiển, LDR được mắc thành mạch cầu phân áp với điện trở cố định R2 để tạo ra điện áp đầu ra Vout:
 - VCC: Điện áp cấp nguồn cho cảm biến
 - RS: Điện trở của quang trở LDR
@@ -101,4 +99,5 @@ Nếu bắt đầu tự án mới cần cài đặt Extension **MKE_ONE_MICROBIT
 ## Hình ảnh sản phẩm
 ![MKE-S02 LDR_LIGHT](/extras/MKE-S02_2.png)
 ![MKE-S02 LDR_LIGHT](/extras/MKE-S02_3.png)
+
 
