@@ -1,5 +1,4 @@
 # Cảm biến ánh sáng quang trở MKE-S02 LDR Light Sensor
-
 MKE-S02 LDR Light Sensor là module cảm biến ánh sáng sử dụng quang trở LDR (Light Dependent Resistor) để đo cường độ ánh sáng môi trường. Cảm biến chuyển đổi sự thay đổi độ sáng thành tín hiệu điện áp Analog tuyến tính, giúp các hệ thống vi điều khiển đọc và xử lý dữ liệu chính xác theo mức ánh sáng thực tế, thay vì chỉ nhận trạng thái bật/tắt (Digital) như nhiều loại cảm biến ánh sáng phổ biến trên thị trường.
 
 Sản phẩm phù hợp cho nhiều ứng dụng như: đo độ sáng môi trường, hệ thống bật/tắt đèn tự động, robot dò sáng, thiết bị IoT và các dự án STEM. Mạch được thiết kế tối ưu nhằm tăng độ ổn định tín hiệu và khả năng chống nhiễu, đảm bảo kết quả đo tin cậy trong cả môi trường học tập và ứng dụng thực tế.
@@ -7,10 +6,12 @@ Sản phẩm phù hợp cho nhiều ứng dụng như: đo độ sáng môi trư
 Cảm biến ánh sáng quang trở MKE-S02 LDR Light Sensor hỗ trợ điện áp giao tiếp 3.3V và 5VDC, cho phép kết nối trực tiếp và an toàn với hầu hết các bo mạch điều khiển phổ biến hiện nay như Arduino, Raspberry Pi, Jetson Nano, Micro:bit và nhiều nền tảng khác. Sản phẩm đi kèm cáp kết nối 3P XH2.54 – Dupont, đảm bảo kết nối chắc chắn, ổn định và thuận tiện trong quá trình sử dụng.
 
 ## Nguyên lý hoạt động
+
 Cảm biến hoạt động dựa trên đặc tính của quang trở LDR: điện trở của LDR thay đổi theo cường độ ánh sáng môi trường.
 - Khi ánh sáng mạnh: điện trở LDR giảm.
 - Khi ánh sáng yếu: điện trở LDR tăng.
 ![MKE_S02](/image/MKE_S02_0.jpg)
+
 Để đọc được giá trị này bằng vi điều khiển, LDR được mắc thành mạch cầu phân áp với điện trở cố định R2 để tạo ra điện áp đầu ra Vout:
 - VCC: Điện áp cấp nguồn cho cảm biến
 - RS: Điện trở của quang trở LDR
@@ -99,5 +100,6 @@ Nếu bắt đầu tự án mới cần cài đặt Extension **MKE_ONE_MICROBIT
 ## Hình ảnh sản phẩm
 ![MKE-S02 LDR_LIGHT](/extras/MKE-S02_2.png)
 ![MKE-S02 LDR_LIGHT](/extras/MKE-S02_3.png)
+
 
 
