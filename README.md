@@ -10,7 +10,8 @@ Cảm biến ánh sáng quang trở MKE-S02 LDR Light Sensor hỗ trợ điện 
 Cảm biến hoạt động dựa trên đặc tính của quang trở LDR: điện trở của LDR thay đổi theo cường độ ánh sáng môi trường.
 - Khi ánh sáng mạnh: điện trở LDR giảm.
 - Khi ánh sáng yếu: điện trở LDR tăng.
-![MKE_S02](/image/MKE_S02_0.jpg)
+
+![MKE_S02](/image/MKE-S02_0.jpg)
 Để đọc được giá trị này bằng vi điều khiển, LDR được mắc thành mạch cầu phân áp với điện trở cố định R2 để tạo ra điện áp đầu ra Vout:
 - VCC: Điện áp cấp nguồn cho cảm biến
 - RS: Điện trở của quang trở LDR
@@ -99,6 +100,7 @@ Nếu bắt đầu tự án mới cần cài đặt Extension **MKE_ONE_MICROBIT
 ## Hình ảnh sản phẩm
 ![MKE-S02 LDR_LIGHT](/extras/MKE-S02_2.png)
 ![MKE-S02 LDR_LIGHT](/extras/MKE-S02_3.png)
+
 
 
 
