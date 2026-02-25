@@ -1,23 +1,24 @@
 # Cảm biến ánh sáng quang trở MKE-S02 LDR Light Sensor
 
-MKE-S02 LDR Light Sensor được sử dụng để đo cường độ ánh sáng bằng quang trở LDR (Light Dependent Resistor), thích hợp với các ứng dụng: đo cường độ sáng môi trường, bật tắt đèn tự động,..., cảm biến trả ra giá trị điện áp Analog tuyến tính tương ứng với cường độ ánh sáng của môi trường giúp bạn có thể ghi nhận và xử lý thông tin một cách chính xác nhất, ngoài ra cảm biến còn được bổ sung các thiết kế ổn định, chống nhiễu.
+MKE-S02 LDR Light Sensor là module cảm biến ánh sáng sử dụng quang trở LDR (Light Dependent Resistor) để đo cường độ ánh sáng môi trường. Cảm biến chuyển đổi sự thay đổi độ sáng thành tín hiệu điện áp Analog tuyến tính, giúp các hệ thống vi điều khiển đọc và xử lý dữ liệu chính xác theo mức ánh sáng thực tế, thay vì chỉ nhận trạng thái bật/tắt (Digital) như nhiều loại cảm biến ánh sáng phổ biến trên thị trường.
+
+Sản phẩm phù hợp cho nhiều ứng dụng như: đo độ sáng môi trường, hệ thống bật/tắt đèn tự động, robot dò sáng, thiết bị IoT và các dự án STEM. Mạch được thiết kế tối ưu nhằm tăng độ ổn định tín hiệu và khả năng chống nhiễu, đảm bảo kết quả đo tin cậy trong cả môi trường học tập và ứng dụng thực tế.
 
 Cảm biến ánh sáng quang trở MKE-S02 LDR Light Sensor hỗ trợ điện áp giao tiếp 3.3V và 5VDC, cho phép kết nối trực tiếp và an toàn với hầu hết các bo mạch điều khiển phổ biến hiện nay như Arduino, Raspberry Pi, Jetson Nano, Micro:bit và nhiều nền tảng khác. Sản phẩm đi kèm cáp kết nối 3P XH2.54 – Dupont, đảm bảo kết nối chắc chắn, ổn định và thuận tiện trong quá trình sử dụng.
 
 ## Nguyên lý hoạt động
 
-Cảm biến hoạt động dựa trên sự thay đổi điện trở (độ dẫn điện) của quang trở (LDR-Light Dependent Resistor) với cường độ ánh sáng của môi trường, để chuyển giá trị điện trở thành điện áp để có thể đọc bằng bộ chuyển đổi ADC (Analog to Digital Converter) của mạch xử lý ta mắc mạch cầu phân áp như sau:
-
 ![MKE_S02](/image/MKE_S02_0.jpg)
 
-Diễn giải các giá trị:
-
-- VCC: điện áp cấp nguồn cho cảm biến.
-- RS: Giá trị điện trở của quang trở (LDR-Light Dependent Resistor).
-- R2: Điện trở tạo thành cấu trúc cầu phân áp với RS, có giá trị xác định theo khuyến nghị của nhà sản xuất.
-- Vout: Điện áp đầu ra thay đổi theo giá trị của RS.
-
-Ta thấy theo công thức trong hình giá trị Vout sẽ thay đổi theo giá trị của điện trở RS, mà RS sẽ thay đổi theo cường độ ánh sáng của môi trường, khi đó dùng mạch xử lý để đo Vout ta xác định được cường độ ánh sáng môi trường tại thời điểm đo. 
+Cảm biến hoạt động dựa trên đặc tính của quang trở LDR: điện trở của LDR thay đổi theo cường độ ánh sáng môi trường.
+- Khi ánh sáng mạnh: điện trở LDR giảm.
+- Khi ánh sáng yếu: điện trở LDR tăng.
+Để đọc được giá trị này bằng vi điều khiển, LDR được mắc thành mạch cầu phân áp với điện trở cố định R2 để tạo ra điện áp đầu ra Vout:
+- VCC: Điện áp cấp nguồn cho cảm biến
+- RS: Điện trở của quang trở LDR
+- R2: Điện trở cố định tạo cầu phân áp
+- Vout: Điện áp Analog thay đổi theo cường độ ánh sáng
+Giá trị Vout được đưa vào chân ADC của vi điều khiển để xác định độ sáng tại thời điểm đo.
 
 ## Thông số kỹ thuật
 - Điện áp cấp nguồn: 5VDC
@@ -60,7 +61,7 @@ Ta thấy theo công thức trong hình giá trị Vout sẽ thay đổi theo gi
 ## Hướng dẫn sử dụng
 ### Hướng dẫn kết nối
 - Cấp nguồn 5VDC cho mạch qua hai chân GND và 5V.
-- Nhận tín cảm biến qua chân tín hiệu SIG.
+- Nhận tín hiệu của cảm biến qua chân SIG.
 <table><thead>
   <tr>
     <th>SIG (Analog Out)</th>
@@ -100,9 +101,3 @@ Nếu bắt đầu tự án mới cần cài đặt Extension **MKE_ONE_MICROBIT
 ## Hình ảnh sản phẩm
 ![MKE-S02 LDR_LIGHT](/extras/MKE-S02_2.png)
 ![MKE-S02 LDR_LIGHT](/extras/MKE-S02_3.png)
-
-
-
-
-
-
