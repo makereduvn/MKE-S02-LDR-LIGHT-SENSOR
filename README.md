@@ -101,3 +101,4 @@ Nếu bắt đầu tự án mới cần cài đặt Extension **MKE_ONE_MICROBIT
 ## Hình ảnh sản phẩm
 ![MKE-S02 LDR_LIGHT](/extras/MKE-S02_2.png)
 ![MKE-S02 LDR_LIGHT](/extras/MKE-S02_3.png)
+
