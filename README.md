@@ -64,7 +64,7 @@ Giá trị Vout được đưa vào chân ADC của vi điều khiển để xá
 - Nhận tín hiệu của cảm biến qua chân S (SIGNAL).
 <table><thead>
   <tr>
-    <th>SIG (Analog Out)</th>
+    <th>SIGNAL (Analog Out)</th>
     <th>Trạng thái</th>
   </tr></thead>
 <tbody>
@@ -101,6 +101,7 @@ Nếu bắt đầu tự án mới cần cài đặt Extension **MKE_ONE_MICROBIT
 ## Hình ảnh sản phẩm
 ![MKE-S02 LDR_LIGHT](/extras/MKE-S02_2.png)
 ![MKE-S02 LDR_LIGHT](/extras/MKE-S02_3.png)
+
 
 
 
