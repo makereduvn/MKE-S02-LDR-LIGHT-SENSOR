@@ -1,4 +1,6 @@
 # Cảm biến ánh sáng quang trở MKE-S02 LDR Light Sensor
+
+## Giới thiệu
 MKE-S02 LDR Light Sensor là cảm biến ánh sáng sử dụng quang trở LDR (Light Dependent Resistor) để đo cường độ ánh sáng môi trường. Cảm biến chuyển đổi sự thay đổi độ sáng thành tín hiệu điện áp Analog tuyến tính, giúp các hệ thống vi điều khiển đọc và xử lý dữ liệu chính xác theo mức ánh sáng thực tế, thay vì chỉ nhận trạng thái bật/tắt (Digital) như nhiều loại cảm biến ánh sáng phổ biến trên thị trường.
 
 Sản phẩm phù hợp cho nhiều ứng dụng như: đo độ sáng môi trường, hệ thống bật/tắt đèn tự động, robot dò sáng, thiết bị IoT và các dự án STEM. Mạch được thiết kế tối ưu nhằm tăng độ ổn định tín hiệu và khả năng chống nhiễu, đảm bảo kết quả đo tin cậy trong cả môi trường học tập và ứng dụng thực tế.
@@ -81,7 +83,7 @@ Giá trị Vout được đưa vào chân ADC của vi điều khiển để xá
 
 ### Hướng dẫn sử dụng với Arduino Uno / Vietduino Uno / ESP32
 - Trong **Tools / Library Manager**, tìm và cài đặt bộ thư viện tổng hợp **"MKE_ONE" by MakerEdu.vn**
-- Mở chương trình mẫu **"MKE_S02_LDR_LIGHT_XXX"** tại **File / Examples / MAKEREDU / Module / MKE_S02_LDR_LIGHT**
+- Mở chương trình mẫu tại **File / Examples / MKE_ONE / Module / MKE_S02_LDR_LIGHT**
 - Cấu hình board mạch tương ứng là **Arduino Uno / ESP32**, chọn đúng cổng **COM Port** của mạch và nhấn **Upload** để nạp chương trình.
 - Cấp nguồn 5VDC cho mạch, kết nối chân S (SIGNAL) của sensor với chân điều khiển được khai báo trong chương trình.
 - Xem kết quả mạch hoạt động theo chương trình đã nạp.
@@ -102,13 +104,5 @@ Nếu bắt đầu tự án mới cần cài đặt Extension **MKE_ONE_MICROBIT
 ![MKE-S02 LDR_LIGHT](/extras/MKE-S02_2.png)
 ![MKE-S02 LDR_LIGHT](/extras/MKE-S02_3.png)
 
-
-
-
-
-
-
-
-
-
-
+## Miễn trừ trách nhiệm
+Sản phẩm này là bo mạch phát triển được thiết kế phục vụ cho mục đích nghiên cứu, thử nghiệm và học tập, không phải là một thiết bị hoàn chỉnh. Trong trường hợp người dùng kết hợp mạch này với các linh kiện, thiết bị hoặc phần mềm khác để tạo thành một hệ thống hoặc sản phẩm hoàn chỉnh, mọi chức năng và tính phù hợp của sản phẩm sau cùng đều thuộc trách nhiệm của người dùng.
