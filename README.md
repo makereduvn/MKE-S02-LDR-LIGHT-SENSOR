@@ -54,7 +54,7 @@ Giá trị Vout được đưa vào chân ADC của vi điều khiển để xá
     <td>Chân cấp nguồn dương 5VDC</td>
   </tr>
   <tr>
-    <td>S/td>
+    <td>S</td>
     <td>Chân tín hiệu Analog Out</td>
   </tr>
 </tbody>
