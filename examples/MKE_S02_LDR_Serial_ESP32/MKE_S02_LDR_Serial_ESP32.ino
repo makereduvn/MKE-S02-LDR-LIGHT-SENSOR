@@ -1,6 +1,6 @@
 // Đặt tên cho chân kết nối cảm biến
 // These constants won't change. They're used to give names to the pins used:
-const int analogInPin = 34;  // IO34-A1 on Vietduino ESP32 (A1 on MakerEdu Shield)
+const int analogInPin = 34;  // IO34
 
 // Tạo biến số nguyên lưu giá trị cảm biến
 // value read from the sensor
