@@ -1,18 +1,10 @@
-// Thêm bộ thư viện
-// Add the library.
-#include <MKL_HCSR04.h>
-
 // Đặt tên cho chân kết nối cảm biến
-#define TRIG_PIN 13
-#define ECHO_PIN 12
-
-// Cấu hình chân kết nối tín hiệu cho cảm biến.
-// Configure the signal connection pins for the sensor.
-MKL_HCSR04 ultra(TRIG_PIN, ECHO_PIN);
+// These constants won't change. They're used to give names to the pins used:
+const int analogInPin = 34;  // IO34-A1 on Vietduino ESP32 (A1 on MakerEdu Shield)
 
 // Tạo biến số nguyên lưu giá trị cảm biến
 // value read from the sensor
-float sensorValue = 0;  
+int sensorValue = 0;  
 
 void setup()
 {
@@ -23,17 +15,16 @@ void setup()
 
 void loop()
 {
-
   // Đọc giá trị cảm biến
   // read the analog in value:
-  sensorValue = ultra.dist();
+  sensorValue = analogRead(analogInPin);
 
-  // Truyền khoảng cách đo được của cảm biến lên máy tính.
+  // Hiển thị giá trị đo được của cảm biến lên máy tính.
   // Show the sensor value on Arduno Serial Monitor
   Serial.print("Value: ");
   Serial.println(sensorValue);
   
-  // Chờ 200ms
-  // Wait 200ms
-  delay(200);
+  // Chờ 500ms
+  // Wait 500ms
+  delay(500);
 }
