@@ -1,5 +1,7 @@
 # Cảm biến ánh sáng quang trở MKE-S02 LDR Light Sensor
-MKE-S02 LDR Light Sensor là module cảm biến ánh sáng sử dụng quang trở LDR (Light Dependent Resistor) để đo cường độ ánh sáng môi trường. Cảm biến chuyển đổi sự thay đổi độ sáng thành tín hiệu điện áp Analog tuyến tính, giúp các hệ thống vi điều khiển đọc và xử lý dữ liệu chính xác theo mức ánh sáng thực tế, thay vì chỉ nhận trạng thái bật/tắt (Digital) như nhiều loại cảm biến ánh sáng phổ biến trên thị trường.
+
+## Giới thiệu
+MKE-S02 LDR Light Sensor là cảm biến ánh sáng sử dụng quang trở LDR (Light Dependent Resistor) để đo cường độ ánh sáng môi trường. Cảm biến chuyển đổi sự thay đổi độ sáng thành tín hiệu điện áp Analog tuyến tính, giúp các hệ thống vi điều khiển đọc và xử lý dữ liệu chính xác theo mức ánh sáng thực tế, thay vì chỉ nhận trạng thái bật/tắt (Digital) như nhiều loại cảm biến ánh sáng phổ biến trên thị trường.
 
 Sản phẩm phù hợp cho nhiều ứng dụng như: đo độ sáng môi trường, hệ thống bật/tắt đèn tự động, robot dò sáng, thiết bị IoT và các dự án STEM. Mạch được thiết kế tối ưu nhằm tăng độ ổn định tín hiệu và khả năng chống nhiễu, đảm bảo kết quả đo tin cậy trong cả môi trường học tập và ứng dụng thực tế.
 
@@ -10,7 +12,9 @@ Cảm biến ánh sáng quang trở MKE-S02 LDR Light Sensor hỗ trợ điện 
 Cảm biến hoạt động dựa trên đặc tính của quang trở LDR: điện trở của LDR thay đổi theo cường độ ánh sáng môi trường.
 - Khi ánh sáng mạnh: điện trở LDR giảm.
 - Khi ánh sáng yếu: điện trở LDR tăng.
-![MKE_S02](/image/MKE_S02_0.jpg)
+
+![MKE_S02](/extras/MKE-S02_0.jpg)
+
 Để đọc được giá trị này bằng vi điều khiển, LDR được mắc thành mạch cầu phân áp với điện trở cố định R2 để tạo ra điện áp đầu ra Vout:
 - VCC: Điện áp cấp nguồn cho cảm biến
 - RS: Điện trở của quang trở LDR
@@ -42,15 +46,15 @@ Giá trị Vout được đưa vào chân ADC của vi điều khiển để xá
   </tr></thead>
 <tbody>
   <tr>
-    <td>GND</td>
+    <td>-</td>
     <td>Chân cấp nguồn âm 0VDC</td>
   </tr>
   <tr>
-    <td>5V</td>
+    <td>+</td>
     <td>Chân cấp nguồn dương 5VDC</td>
   </tr>
   <tr>
-    <td>SIG</td>
+    <td>S</td>
     <td>Chân tín hiệu Analog Out</td>
   </tr>
 </tbody>
@@ -58,11 +62,11 @@ Giá trị Vout được đưa vào chân ADC của vi điều khiển để xá
 
 ## Hướng dẫn sử dụng
 ### Hướng dẫn kết nối
-- Cấp nguồn 5VDC cho mạch qua hai chân GND và 5V.
-- Nhận tín hiệu của cảm biến qua chân SIG.
+- Cấp nguồn 5VDC cho mạch qua hai chân - và +.
+- Nhận tín hiệu của cảm biến qua chân S (SIGNAL).
 <table><thead>
   <tr>
-    <th>SIG (Analog Out)</th>
+    <th>SIGNAL (Analog Out)</th>
     <th>Trạng thái</th>
   </tr></thead>
 <tbody>
@@ -79,16 +83,16 @@ Giá trị Vout được đưa vào chân ADC của vi điều khiển để xá
 
 ### Hướng dẫn sử dụng với Arduino Uno / Vietduino Uno / ESP32
 - Trong **Tools / Library Manager**, tìm và cài đặt bộ thư viện tổng hợp **"MKE_ONE" by MakerEdu.vn**
-- Mở chương trình mẫu **"MKE_S02_LDR_LIGHT_XXX"** tại **File / Examples / MAKEREDU / Module / MKE_S02_LDR_LIGHT**
+- Mở chương trình mẫu tại **File / Examples / MKE_ONE / Sensor / MKE_S02_LDR_LIGHT**
 - Cấu hình board mạch tương ứng là **Arduino Uno / ESP32**, chọn đúng cổng **COM Port** của mạch và nhấn **Upload** để nạp chương trình.
-- Cấp nguồn 5VDC cho mạch, kết nối chân SIG của sensor với chân điều khiển được khai báo trong chương trình.
+- Cấp nguồn 5VDC cho mạch, kết nối chân S (SIGNAL) của sensor với chân điều khiển được khai báo trong chương trình.
 - Xem kết quả mạch hoạt động theo chương trình đã nạp.
 
 ### Hướng dẫn lập trình với Micro:bit (kéo thả khối)
 
 - Khởi động [Microsoft MakeCode](https://makecode.microbit.org/) và **Import** chương trình theo đường link sau: `https://github.com/makereduvn/mke_s02_ldr_light_microbit/`
 - Kết nối mạch Micro:bit và **Download** chương trình.
-- Cấp nguồn 5VDC cho mạch, kết nối chân SIG của sensor với chân điều khiển được khai báo trong chương trình.
+- Cấp nguồn 5VDC cho mạch, kết nối chân S (SIGNAL) của sensor với chân điều khiển được khai báo trong chương trình.
 - Xem kết quả mạch hoạt động theo chương trình đã nạp.
 
 Nếu bắt đầu tự án mới cần cài đặt Extension **MKE_ONE_MICROBIT** trên [Microsoft MakeCode](https://makecode.microbit.org/) theo [hướng dẫn tại đây](https://github.com/makereduvn/MKE_ONE_MICROBIT). Sau khi cài đặt thành công, các khối lệnh của Extension **MKE_ONE_MICROBIT** sẽ xuất hiện trong danh sách block và sẵn sàng để sử dụng.
@@ -100,6 +104,5 @@ Nếu bắt đầu tự án mới cần cài đặt Extension **MKE_ONE_MICROBIT
 ![MKE-S02 LDR_LIGHT](/extras/MKE-S02_2.png)
 ![MKE-S02 LDR_LIGHT](/extras/MKE-S02_3.png)
 
-
-
-
+## Miễn trừ trách nhiệm
+Sản phẩm này là bo mạch phát triển được thiết kế phục vụ cho mục đích nghiên cứu, thử nghiệm và học tập, không phải là một thiết bị hoàn chỉnh. Trong trường hợp người dùng kết hợp mạch này với các linh kiện, thiết bị hoặc phần mềm khác để tạo thành một hệ thống hoặc sản phẩm hoàn chỉnh, mọi chức năng và tính phù hợp của sản phẩm sau cùng đều thuộc trách nhiệm của người dùng.
